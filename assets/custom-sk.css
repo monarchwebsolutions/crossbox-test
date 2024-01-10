@@ -1,0 +1,71 @@
+.small-padding {
+  padding: 0 10px;
+}
+
+.left-side-announcement__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side-announcement__text svg {
+  padding: 0 10px;
+}
+.customer--icon {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+  .customer--icon {
+    background-color: #fff;
+    filter: drop-shadow(0px 2px 15px rgba(183, 189, 196, 0.57));
+    border-radius: 50%;
+    min-width: 52px;
+    min-height: 52px;
+    display: flex;
+  }
+
+  .shopping--bag {
+    background-color: #fff;
+    filter: drop-shadow(0px 2px 15px rgba(183, 189, 196, 0.57));
+    border-radius: 50%;
+    min-width: 52px;
+    min-height: 52px;
+  }
+  .max--width-search-form {
+    max-width: 410px;
+  }
+  .search--input-adjustments {
+    max-width: 410px;
+  }
+}
+.gap--xs {
+  gap: 1rem;
+}
+
+.shopping--bag svg,
+.customer--icon svg {
+  max-width: 25px;
+  max-height: 21px;
+}
+
+.search--input-adjustments {
+  padding-left: 15px;
+  border-radius: 26.5px 26.5px 26.5px 26.5px;
+  border: 1px solid #d2d2d2;
+  background: #fff;
+}
+
+.button--search-custom {
+  border-radius: 0px 26.5px 26.5px 0px;
+  background: #1c6d72;
+  max-height: 100%;
+  min-width: 95px;
+}
+
+.button--search-custom svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  fill: white;
+}
