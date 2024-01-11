@@ -17,13 +17,9 @@ for (let i = 0; i < addToCartForms.length; i++) {
         const cart = await res.json();
         console.log (cart.item_count)
 
-        // Update cart count
+        // Update cart count]
         const cart_count = document.getElementsByClassName('header__cart-count-number')[0]
+        cart_count.style.visibility = "visible";
         cart_count.textContent = cart.item_count;
-        if(cart.item_count > 0){
-            cart_count.style.visibility = "visible";
-        }
-        
-
     });
 }
