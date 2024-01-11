@@ -206,7 +206,7 @@
               <span
                 aria-hidden="true"
                 class="header__cart-count-number"
-                {% if cart == empty %}
+                {% if cart.item_count == 0 %}
                   style="visibility:hidden;"
                 {% endif %}
               >
