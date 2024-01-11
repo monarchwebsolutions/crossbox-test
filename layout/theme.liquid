@@ -499,7 +499,7 @@
       };
       const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
       for (let i = 0; i < addToCartForms.length; i++) {
-        addToCartForms[i].getElementByTagName('button').addEventListener('click', function (event) {
+        addToCartForms[i].getElementsByTagName('button')[0].addEventListener('click', function (event) {
           // Handle the form data
           event.preventDefault();
         });
