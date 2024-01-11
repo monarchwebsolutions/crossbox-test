@@ -494,13 +494,13 @@
       <script src="{{ 'instant-page.js' | asset_url }}" type="module" defer="defer"></script>
     {%- endif -%}
     <script>
+      var prevent_atc = function (event) {
+        event.preventDefault();
+      };
       const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
-
-      addToCartForms.forEach((form) => {
-        form.addEventListener('submit', (event) => {
-          event.preventDefault();
-        });
-      });
+      for (let i = 0; i < addToCartForms.length; i++) {
+        addToCartForms[i].addEventListener('submit', prevent_atc, true);
+      }
     </script>
   </body>
 </html>
