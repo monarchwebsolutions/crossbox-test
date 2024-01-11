@@ -10,7 +10,7 @@ for (let i = 0; i < addToCartForms.length; i++) {
         // Submit form with ajax
         await fetch("/cart/add", {
             method: "post",
-            body: new FormData(form)
+            body: new FormData(addToCartForms[i]),
         });
     });
 }
