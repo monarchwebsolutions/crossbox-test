@@ -201,12 +201,17 @@
         <div id="cart-icon-bubble">
           <div
             class="header__cart-count absolute bg-theme-text text-theme-bg text-center"
-            {% if cart == empty %}
-              style="visibility:hidden;"
-            {% endif %}
           >
             {%- if cart.item_count < 10000 -%}
-              <span aria-hidden="true" class="header__cart-count-number">{{ cart.item_count }}</span>
+              <span
+                aria-hidden="true"
+                class="header__cart-count-number"
+                {% if cart == empty %}
+                  style="visibility:hidden;"
+                {% endif %}
+              >
+                {{- cart.item_count -}}
+              </span>
             {%- endif -%}
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
