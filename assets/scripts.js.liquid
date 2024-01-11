@@ -18,10 +18,11 @@ for (let i = 0; i < addToCartForms.length; i++) {
 
         // Update cart count
         const cart_count = document.getElementsByClassName('header__cart-count-number')[0]
+        cart_count.textContent = cart.item_count;
         if(cart.item_count > 0){
             cart_count.style.visibility = "visible";
         }
-        cart_count.textContent = cart.item_count;
+        
 
     });
 }
