@@ -15,6 +15,7 @@ for (let i = 0; i < addToCartForms.length; i++) {
         // Get new cart object
         const res = await fetch("/cart.json")
         const cart = await res.json();
+        console.log (cart)
 
         // Update cart count
         const cart_count = document.getElementsByClassName('header__cart-count-number')[0]
