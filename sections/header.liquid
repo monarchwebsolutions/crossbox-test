@@ -201,6 +201,9 @@
         <div id="cart-icon-bubble">
           <div
             class="header__cart-count absolute bg-theme-text text-theme-bg text-center"
+            {% if cart.item_count == 0 %}
+              style="visibility:hidden;"
+            {% endif %}
           >
             {%- if cart.item_count < 10000 -%}
               <span

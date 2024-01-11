@@ -18,8 +18,10 @@ for (let i = 0; i < addToCartForms.length; i++) {
         console.log (cart.item_count)
 
         // Update cart count]
-        const cart_count = document.getElementsByClassName('header__cart-count-number')[0]
-        cart_count.style.visibility = "visible";
-        cart_count.textContent = cart.item_count;
+        const cart_count_bubble = document.getElementsByClassName('header__cart-count')[0]
+        const cart_count_bumber = document.getElementsByClassName('header__cart-count-number')[0]
+        cart_count_number.style.visibility = "visible";
+        cart_count_bubble.style.visibility = "visible";
+        cart_count_number.textContent = cart.item_count;
     });
 }
