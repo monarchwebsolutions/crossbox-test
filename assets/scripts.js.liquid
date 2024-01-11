@@ -7,10 +7,6 @@ for (let i = 0; i < addToCartForms.length; i++) {
         // Handle the form data
         event.preventDefault();
 
-        // Submit form with ajax
-        await fetch('/cart/add', {
-            method: 'post',
-            body: new FormData(form),
-        })
+        
     });
 }
