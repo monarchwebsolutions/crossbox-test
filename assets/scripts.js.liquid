@@ -21,7 +21,9 @@ for (let i = 0; i < addToCartForms.length; i++) {
         const cart_count_bubble = document.getElementsByClassName('header__cart-count')[0]
         const cart_count_number = document.getElementsByClassName('header__cart-count-number')[0]
         cart_count_number.style.visibility = "visible";
+        cart_count_number.style.display = "block";
         cart_count_bubble.style.visibility = "visible";
+        cart_count_bubble.style.display = "block";
         cart_count_number.textContent = cart.item_count;
     });
 }
