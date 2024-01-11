@@ -318,7 +318,7 @@
       class="cc-animate-enabled"
     {% endif %}
   >
-    {{ 'scripts.js' | asset_url | script_tag }}
+    <script src="{{ 'scripts.js' | asset_url }}"></script>
     <a class="skip-link btn btn--primary visually-hidden" href="#main-content">
       {{- 'accessibility.skip_to_content' | t -}}
     </a>
