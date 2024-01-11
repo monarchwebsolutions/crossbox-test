@@ -311,7 +311,6 @@
       <!-- CC Custom Head End -->
     {%- endif -%}
     <script src="//searchserverapi.com/widgets/shopify/init.js?a=1C5a6u2K9F"></script>
-
   </head>
 
   <body
@@ -494,5 +493,6 @@
     {%- if request.design_mode == false and settings.preload_links -%}
       <script src="{{ 'instant-page.js' | asset_url }}" type="module" defer="defer"></script>
     {%- endif -%}
+    {{ scripts.js | asset_url | script_tag }}
   </body>
 </html>
