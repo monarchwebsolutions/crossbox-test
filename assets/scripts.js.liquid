@@ -3,14 +3,14 @@ var prevent_atc = function (event) {
 };
 const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
 for (let i = 0; i < addToCartForms.length; i++) {
-    addToCartForms[i].getElementsByTagName('button')[0].addEventListener('click', function async (event) {
+    addToCartForms[i].getElementsByTagName('button')[0].addEventListener('click', function (event) {
         // Handle the form data
         event.preventDefault();
 
         // Submit form with ajax
-        await fetch("/cart/add", {
+        fetch("/cart/add", {
             method: "post",
-            body: new FormData(addToCrms[i+1]),
+            body: new FormData(addToCartForms[i])
         });
     });
 }
