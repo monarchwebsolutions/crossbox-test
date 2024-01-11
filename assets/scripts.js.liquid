@@ -8,6 +8,9 @@ for (let i = 0; i < addToCartForms.length; i++) {
         event.preventDefault();
 
         // Submit form with ajax
-        
+        fetch("/cart/add", {
+            method: "post",
+            body: new FormData(form),
+        });
     });
 }
