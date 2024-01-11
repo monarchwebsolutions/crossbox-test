@@ -3,7 +3,7 @@ var prevent_atc = function (event) {
 };
 const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
 for (let i = 0; i < addToCartForms.length; i++) {
-    addToCartForms[i].getElementsByTagName('button')[0].addEventListener('click', async function (event) {
+    addToCartForms[i].getElementsByTagName('button')[0].addEventListener('click', function async (event) {
         // Handle the form data
         event.preventDefault();
 
