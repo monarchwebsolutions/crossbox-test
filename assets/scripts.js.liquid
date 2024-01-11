@@ -17,7 +17,11 @@ for (let i = 0; i < addToCartForms.length; i++) {
         const cart = res.json();
 
         // Update cart count
-        document.getElementsByClassName('header__cart-count-number')[0].textContent = cart.item_count
+        const cart_count = document.getElementsByClassName('header__cart-count-number')[0]
+        if(cart.item_count > 0){
+            cart_count.style.visibility = "visible";
+        }
+        cart_count.textContent = cart.item_count;
 
     });
 }
