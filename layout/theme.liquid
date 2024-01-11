@@ -318,7 +318,15 @@
       class="cc-animate-enabled"
     {% endif %}
   >
-    <script src="{{ 'scripts.js.liquid' | asset_url }}"></script>
+    <script>
+      const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
+
+      addToCartForms.forEach((form) => {
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+        });
+      });
+    </script>
     <a class="skip-link btn btn--primary visually-hidden" href="#main-content">
       {{- 'accessibility.skip_to_content' | t -}}
     </a>
